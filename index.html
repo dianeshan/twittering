@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twittering</title>
+    <link rel="icon" type="image/png" href="./imgs/twitterlogo.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="app.js"></script>
+</head>
+<body class="background">
+    <audio id="tweetsound">
+        <source src="./sounds/bubbles.mp3" />
+    </audio>
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            <div class="header item"><i class="code icon"></i>Twittering</div>
+            <a href="./try.html" class ="item">Home</a>
+        </div>
+    </div>
+        <div class="tweetDiv container heading">
+            <h1>Twittering</h1>
+            <div class="ui main text container segment">
+                <div class="ui huge header">New Post</div>
+                <form class="ui form tweetForm" id="tweetForm" method="POST">
+                    <div class="field">
+                        <label>Status</label>
+                        <textarea name="post" id="tweetInput" placeholder="What's happening?" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="newnew" onclick="postTweet(tweetInput.value)">Tweet</button>
+                </form>
+            </div>
+        </div>
+        <p></p>
+        <div class="container">
+            <div id="posts">
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+<script>
+    const mySound = document.getElementById("tweetsound");
+    const correctButton = document.getElementById("newnew");
+    correctButton.addEventListener("click", function(){
+        mySound.play();
+    })
+</script>
+</html>

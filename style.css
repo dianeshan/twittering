@@ -1,0 +1,28 @@
+.heading {
+    margin-top: 7.0em;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.background {
+    background: #f5d9d5;
+}
+
+#help-block {
+    justify-content: center;
+    text-align: center;
+}
+
+.tweet_box {
+    justify-content: center;
+}
+
+.timestamp {
+    font-size: 12px;
+}
